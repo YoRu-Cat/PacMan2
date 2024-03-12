@@ -206,4 +206,39 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[pacmanCurrentIndex].classList.remove("power-pellet");
     }
   }
+  class Ghost {
+    constructor(className, startIndex, speed) {
+      this.className = className;
+      this.startIndex = startIndex;
+      this.speed = speed;
+      this.currentIndex = startIndex;
+      this.isScared = false;
+      this.timerId = NaN;
+    }
+  }
+  // all the ghosts
+  ghosts = [
+    new Ghost("ghost-1", 348, 250),
+    new Ghost("ghost-2", 376, 400),
+    new Ghost("ghost-3", 351, 300),
+    new Ghost("ghost-4", 379, 500),
+  ];
+
+  // draw ghosts on the grid
+
+  ghosts.forEach((ghost) => {
+    squares[ghost.currentIndex].classList.add(ghost.className);
+    squares[ghost.currentIndex].classList.add("ghost");
+  });
+  // move ghost randomly
+  ghosts.forEach((ghost) => moveGhost(ghost));
+  function moveGhost(ghost) {
+    const directions = [-1, 1, width, -width];
+    const direction = directions[Math.floor(Math.random() * directions.length)];
+    ghost.timerId = setInterval(function () {
+      squares[ghost.currentIndex].classList.remove(ghost.className, "ghost");
+      ghost.currentIndex += direction;
+      squares[ghost.currentIndex].classList.add(ghost.className, "ghost");
+    }, ghost.speed);
+  }
 });
