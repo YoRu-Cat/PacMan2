@@ -16,6 +16,7 @@ h3 {
   display: block;
   font-family: "Pixelify Sans", sans-serif;
   font-size: 3.5rem;
+  font-weight: 200;
 }
 .grid {
   width: 560px;
@@ -23,6 +24,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   box-shadow: 10px 10px 20px black;
+  background-color: black;
 }
 .grid div {
   width: 20px;
@@ -30,39 +32,36 @@ h3 {
   box-sizing: border-box;
 }
 .pac-dot {
-  background: green;
-  border: 5px solid var(--main-color);
+  background: url(images/yellowDot.png);
   box-sizing: border-box;
-  z-index: -100;
 }
 .wall {
-  background: #8ecae6;
+  background: url(images/wall.png);
 }
 .power-pellet {
-  background: green;
-  border-radius: 10px;
+  background: url(images/pinkDot.png);
 }
 .ghost-1 {
-  background: red;
+  background: url(images/ghost.png);
   border: none;
 }
 .ghost-2 {
-  background: pink;
+  background: url(images/ghost.png);
   border: none;
 }
 .ghost-3 {
-  background: cyan;
+  background: url(images/ghost.png);
   border: none;
 }
 .ghost-4 {
-  background: orange;
+  background: url(images/ghost.png);
   border: none;
 }
 .pac-man {
-  background: rgb(255, 255, 0);
+  background: url(images/pac1.png);
   border-radius: 10px;
   border: 0.2px solid black;
 }
 .scared-ghost {
-  background: aquamarine;
+  background: url(images/scaredGhost.png);
 }
