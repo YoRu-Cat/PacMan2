@@ -1,9 +1,25 @@
+:root {
+  --main-color: #7a0045;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--main-color);
+}
+h3 {
+  display: block;
+}
 .grid {
   width: 560px;
   height: 560px;
-  border: solid black;
   display: flex;
   flex-wrap: wrap;
+  box-shadow: 10px 10px 20px black;
 }
 .grid div {
   width: 20px;
@@ -12,11 +28,11 @@
 }
 .pac-dot {
   background: green;
-  border: 5px solid white;
+  border: 5px solid var(--main-color);
   box-sizing: border-box;
 }
 .wall {
-  background: blue;
+  background: #2d0065;
 }
 .power-pellet {
   background: green;
@@ -35,7 +51,8 @@
   background: orange;
 }
 .pac-man {
-  background: yellow;
+  background: rgb(255, 255, 0);
+  border-radius: 10px;
 }
 .scared-ghost {
   background: aquamarine;
