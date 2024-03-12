@@ -181,6 +181,29 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
     squares[pacmanCurrentIndex].classList.add("pac-man");
+    pacDotEaten();
+    powerPelletEaten();
+    // checkForGameOver();
+    // checkForWin();
   }
   document.addEventListener("keyup", movePacman);
+
+  // what happen when you eat a dot
+  function pacDotEaten() {
+    if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {
+      score++;
+      scoreDisplay.innerHTML = score;
+      squares[pacmanCurrentIndex].classList.remove("pac-dot");
+    }
+  }
+
+  // what happen when you eat a power pallet
+  function powerPelletEaten() {
+    if (squares[pacmanCurrentIndex].classList.contains("power-pellet")) {
+      score += 10;
+      scoreDisplay.innerHTML = score;
+
+      squares[pacmanCurrentIndex].classList.remove("power-pellet");
+    }
+  }
 });
