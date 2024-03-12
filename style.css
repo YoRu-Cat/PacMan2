@@ -33,6 +33,7 @@ h3 {
   background: green;
   border: 5px solid var(--main-color);
   box-sizing: border-box;
+  z-index: -100;
 }
 .wall {
   background: #8ecae6;
@@ -43,15 +44,19 @@ h3 {
 }
 .ghost-1 {
   background: red;
+  border: none;
 }
 .ghost-2 {
   background: pink;
+  border: none;
 }
 .ghost-3 {
   background: cyan;
+  border: none;
 }
 .ghost-4 {
   background: orange;
+  border: none;
 }
 .pac-man {
   background: rgb(255, 255, 0);
